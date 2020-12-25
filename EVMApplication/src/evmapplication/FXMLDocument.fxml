@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="evmapplication.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutX="-6.0" prefHeight="550.0" prefWidth="216.0" style="-fx-background-color: #2B252e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="show_resultID" layoutX="67.0" layoutY="325.0" mnemonicParsing="false" onAction="#ActionOnResultShow" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: lightgreen;" text="SHOW RESULT" />
+            <Label alignment="CENTER" layoutX="8.0" layoutY="2.0" prefHeight="92.0" prefWidth="257.0" style="-fx-background-color: blue;" text="RESULT" textFill="#220202">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <InnerShadow height="50.65" radius="12.1625" width="0.0" />
+               </effect>
+            </Label>
+            <TextField fx:id="Eirst_WinnerID" layoutX="8.0" layoutY="120.0" prefHeight="37.0" prefWidth="257.0" promptText="FIRST WINNER">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Second_WinnerID" layoutX="8.0" layoutY="202.0" prefHeight="37.0" prefWidth="257.0" promptText="SECOND WINNER">
+               <effect>
+                  <InnerShadow color="#0a0a0a" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tabale_view" layoutX="260.0" layoutY="101.0" prefHeight="231.0" prefWidth="439.0">
+        <columns>
+          <TableColumn fx:id="candidate_id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="candidate_name" prefWidth="175.0" text="CANDIDATE NAME" />
+            <TableColumn fx:id="candidate_party" prefWidth="72.0" text="PARTY" />
+            <TableColumn fx:id="candidate_rating" prefWidth="166.0" text="RATING" />
+        </columns>
+      </TableView>
+      <Button layoutX="260.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="439.0" style="-fx-background-color: yellow;" text="VOTING SYSTEM">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="ListOfUmidwar" layoutX="428.0" layoutY="388.0" prefHeight="25.0" prefWidth="257.0" promptText="SELECT YOUR CONDIDATE">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <Label layoutX="289.0" layoutY="388.0" prefHeight="25.0" prefWidth="120.0" text="SELECT CANDIDATE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <Button fx:id="CastVote" layoutX="430.0" layoutY="426.0" mnemonicParsing="false" onAction="#ActionOnVoteSummition" prefHeight="25.0" prefWidth="112.0" text="CAST VOTE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="getStudentId" layoutX="426.0" layoutY="343.0" prefHeight="25.0" prefWidth="120.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Button layoutX="566.0" layoutY="343.0" mnemonicParsing="false" onAction="#ActionOnValidateStudent" prefHeight="25.0" prefWidth="120.0" text="VALIDATE CANDIDATE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <Glow level="0.0">
+               <input>
+                  <InnerShadow />
+               </input>
+            </Glow>
+         </effect>
+      </Button>
+      <Label layoutX="289.0" layoutY="343.0" prefHeight="25.0" prefWidth="112.0" text="ENTER YOU ID-NO:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow height="50.65" radius="12.1625" width="0.0" />
+         </effect>
+      </Label>
+      <Separator layoutX="260.0" layoutY="378.0" prefHeight="3.0" prefWidth="439.0" />
+      <Separator layoutX="260.0" layoutY="465.0" prefHeight="1.0" prefWidth="439.0" />
+      <Button fx:id="CantVote" layoutX="572.0" layoutY="426.0" mnemonicParsing="false" onAction="#ActionOnCantVote" prefHeight="25.0" prefWidth="112.0" text="CAN'T VOTE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

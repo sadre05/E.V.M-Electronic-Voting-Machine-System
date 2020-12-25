@@ -1,0 +1,2 @@
+# E.V.M-Electronic-Voting-Machine-System
+I have made EVM Desktop (GUI) Application Using JavaFXML along with JDBC. This Application is responsible to conduct the college mini election that will verify the voters as well, this will verify students (voters) with their student-id card number even no one can vote twice. Finally, we can get list of result of the election, which happened like winner and 2nd winner on that application GUI. Used Technologies and language:- Java,JavaFXML,Mysql,JDBC.  Used Tools:- Netbeans,scenbuilder.
